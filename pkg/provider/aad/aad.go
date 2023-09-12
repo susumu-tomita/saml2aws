@@ -722,6 +722,7 @@ func (ac *Client) reProcessForm(srcBodyStr string) (*http.Response, error) {
 }
 
 func (ac *Client) reSubmitFormData(resBodyStr string) (url.Values, string, error) {
+	log.Println("HTML Response Body: ", resBodyStr)
 	formValues := url.Values{}
 	var formSubmitUrl string
 
